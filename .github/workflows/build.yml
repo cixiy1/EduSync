@@ -38,7 +38,6 @@ jobs:
         script-name: manager/main.py
         output-filename: edusync-manager.exe
         onefile: true
-    - uses: actions/checkout@master
     - name: Archive Release
       uses: thedoctor0/zip-release@0.7.5
       with:
