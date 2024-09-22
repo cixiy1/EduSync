@@ -9,15 +9,10 @@ jobs:
       max-parallel: 5
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v3
+    - uses: conda-incubator/setup-miniconda@v3
       with:
+        auto-update-conda: true
         python-version: '3.11.9'
-    - name: Add conda to system path
-      run: |
-        # $CONDA is an environment variable pointing to the root of the miniconda directory
-        echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies
       run: |
         conda env update --file environment.yml --name EduSync
@@ -32,3 +27,33 @@ jobs:
       run: |
         conda install pytest
         pytest
+        - uses: Nuitka/Nuitka-Action@main
+    - name: Build Client
+      with:
+        nuitka-version: main
+        script-name: client/main.py
+        output-filename: edusync-client.exe
+        onefile: true
+    - uses: Nuitka/Nuitka-Action@main
+      name: Build Manager
+      with:
+        nuitka-version: main
+        script-name: manager/main.py
+        output-filename: edusync-manager.exe
+        onefile: true
+    - uses: actions/checkout@master
+    - name: Archive Release
+      uses: thedoctor0/zip-release@0.7.5
+      with:
+        type: 'zip'
+        path: './server'
+        filename: 'edusync-server.zip'
+        exclusions: '*.git* /*node_modules/* .editorconfig'
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: upload-build
+        path: |
+          build/edusync-client.exe
+          build/edusync-manager.exe
+          build/edusync-server.zip
