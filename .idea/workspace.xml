@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a48f8728-086b-4998-83c4-8102ca67241e" name="更改" comment="更新文件 README.md：删除不必要的空格">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a48f8728-086b-4998-83c4-8102ca67241e" name="更改" comment="更新workflow">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/python-package-conda.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -438,7 +439,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726469051933</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="更新workflow">
+      <option name="closed" value="true" />
+      <created>1726984691587</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1726984691587</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +473,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT_PROFILE" value="Default" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="完善Network模块。" />
     <MESSAGE value="消除语法错误。" />
     <MESSAGE value="I m SB" />
     <MESSAGE value="动词的修饰一般为“形容词(副词)+地+动词’。您的意思是否是:好地让" />
@@ -489,7 +497,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="修正语法错误" />
     <MESSAGE value="更新文件 README.md：删除不必要的空格" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新文件 README.md：删除不必要的空格" />
+    <MESSAGE value="更新workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新workflow" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
