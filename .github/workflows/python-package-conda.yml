@@ -27,8 +27,8 @@ jobs:
       run: |
         conda install pytest
         pytest
-        - uses: Nuitka/Nuitka-Action@main
-    - name: Build Client
+    - uses: Nuitka/Nuitka-Action@main
+      name: Build Client
       with:
         nuitka-version: main
         script-name: client/main.py
